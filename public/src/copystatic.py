@@ -7,7 +7,7 @@ def copy_files_recursive(source_dir_path, dest_dir_path):
         os.mkdir(dest_dir_path)
 
     for filename in os.listdir(source_dir_path):
-        if filename in ["public", "docs", ".git", "src"]:
+        if filename == "public":
             continue
             
         from_path = os.path.join(source_dir_path, filename)

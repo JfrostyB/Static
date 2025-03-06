@@ -7,7 +7,7 @@ from gencontent import generate_pages_recursive
 
 
 dir_path_static = ".."
-dir_path_public = "./docs"
+dir_path_public = "../docs"
 dir_path_content = "../content"
 template_path = "../template.html"
 

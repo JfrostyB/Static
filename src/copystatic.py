@@ -6,8 +6,15 @@ def copy_files_recursive(source_dir_path, dest_dir_path):
     if not os.path.exists(dest_dir_path):
         os.mkdir(dest_dir_path)
 
+    exclude_list = [
+        "public", "docs", ".git", "src", 
+        "build.sh", "main.sh", "test.sh", 
+        "template.html", ".gitignore", 
+        "content"
+    ]
+
     for filename in os.listdir(source_dir_path):
-        if filename in ["public", "docs", ".git", "src"]:
+        if filename in exclude_list:
             continue
             
         from_path = os.path.join(source_dir_path, filename)
